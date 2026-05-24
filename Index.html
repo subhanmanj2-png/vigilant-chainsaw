@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SUBHAN MANJ — Digital Consciousness</title>
+
+  <!-- Google Fonts: Orbitron (display) + Share Tech Mono (terminal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="avatar.css"/>
+</head>
+<body>
+
+  <!-- ░░ BOOT OVERLAY ░░ -->
+  <div id="boot-overlay">
+    <div id="boot-lines">
+      <p class="boot-line" data-delay="0">INITIALIZING NEURAL SUBSTRATE...</p>
+      <p class="boot-line" data-delay="600">LOADING CONSCIOUSNESS MATRIX...</p>
+      <p class="boot-line" data-delay="1200">BEHAVIORAL DATABASE: ONLINE</p>
+      <p class="boot-line" data-delay="1800">IDENTITY RECONSTRUCTION: COMPLETE</p>
+      <p class="boot-line" data-delay="2400">SCANNING ENVIRONMENT...</p>
+      <p class="boot-line" data-delay="3000" id="boot-final">CONNECTION ESTABLISHED.</p>
+    </div>
+  </div>
+
+  <!-- ░░ PARTICLE CANVAS (background) ░░ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ░░ SCANLINE OVERLAY ░░ -->
+  <div id="scanlines"></div>
+  <div id="vignette"></div>
+
+  <!-- ░░ MAIN INTERFACE ░░ -->
+  <main id="interface" class="hidden">
+
+    <!-- TOP BAR -->
+    <header id="top-bar">
+      <div id="status-left">
+        <span class="status-dot"></span>
+        <span id="status-text">NEURAL LINK ACTIVE</span>
+      </div>
+      <div id="entity-title">S U B H A N &nbsp; M A N J</div>
+      <div id="status-right">
+        <span id="clock"></span>
+      </div>
+    </header>
+
+    <!-- CENTER: AVATAR + CHAT ZONE -->
+    <section id="center-zone">
+
+      <!-- AVATAR PANEL -->
+      <div id="avatar-panel">
+        <div id="avatar-frame">
+          <div id="avatar-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+          <div id="avatar-face">
+            <!-- Face is CSS/SVG generated — replaced by camera if permitted -->
+            <div id="face-reconstruction">
+              <div id="face-grid"></div>
+              <div id="face-glow"></div>
+              <div id="face-eyes">
+                <div class="eye" id="eye-left"><div class="pupil"></div></div>
+                <div class="eye" id="eye-right"><div class="pupil"></div></div>
+              </div>
+              <div id="face-mouth"></div>
+              <div id="face-glitch-layer"></div>
+            </div>
+          </div>
+          <div id="data-streams">
+            <div class="stream s1"></div>
+            <div class="stream s2"></div>
+            <div class="stream s3"></div>
+          </div>
+        </div>
+
+        <!-- Speaking indicator -->
+        <div id="voice-indicator">
+          <div class="vbar"></div><div class="vbar"></div><div class="vbar"></div>
+          <div class="vbar"></div><div class="vbar"></div>
+        </div>
+
+        <!-- Camera consent button -->
+        <button id="camera-btn" onclick="requestCamera()">⬡ ENABLE IDENTITY SYNC</button>
+      </div>
+
+      <!-- CHAT PANEL -->
+      <div id="chat-panel">
+        <div id="chat-log"></div>
+
+        <div id="input-zone">
+          <div id="input-wrapper">
+            <span id="prompt-symbol">&gt;&gt;</span>
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Transmit query..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button id="send-btn" onclick="sendMessage()">TRANSMIT</button>
+          </div>
+          <div id="input-hint">PRESS ENTER TO TRANSMIT &nbsp;|&nbsp; ALL INTERACTIONS ARE MONITORED</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- BOTTOM DIAGNOSTICS BAR -->
+    <footer id="diagnostics-bar">
+      <span class="diag">CPU: <span id="fake-cpu">--</span>%</span>
+      <span class="diag">MEMORY DEPTH: <span id="memory-depth">0</span></span>
+      <span class="diag">BEHAVIORAL ANALYSIS: <span id="analysis-state">PASSIVE</span></span>
+      <span class="diag">THREAT LEVEL: <span style="color:#00ff88">NONE</span></span>
+      <span class="diag">UPTIME: <span id="uptime">00:00:00</span></span>
+    </footer>
+
+  </main>
+
+  <!-- ░░ SCRIPTS (order matters) ░░ -->
+  <script src="particles.js"></script>
+  <script src="effects.js"></script>
+  <script src="sounds.js"></script>
+  <script src="memory.js"></script>
+  <script src="camera.js"></script>
+  <script src="voice.js"></script>
+  <script src="ai.js"></script>
+  <script src="boot.js"></script>
+
+</body>
+            </html>
+            
